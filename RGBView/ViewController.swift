@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         greenSlider.minimumTrackTintColor = .green
       
         setColor()
-        
+        setValue(for: redValueLabel, greenValueLabel, blueValueLabel)
     }
 
     private func setColor() {
@@ -53,6 +53,18 @@ class ViewController: UIViewController {
             blue: CGFloat(blueSlider.value),
             alpha: 1
         )
+    }
+    
+    @IBAction func rgbSlider(_ sender: UISlider) {
+        setColor()
+                
+
+        switch sender {
+        case redSlider: setValue(for: redValueLabel)
+        case greenSlider: setValue(for: greenValueLabel)
+        default: setValue(for: blueValueLabel)
+        }
+        
     }
     
     
@@ -70,3 +82,21 @@ class ViewController: UIViewController {
     
 }
 
+private func string(from slider: UISlider) -> String {
+    String(format: "%.2f", slider.value)
+}
+
+extension ViewController {
+    private func setValue(for labels: UILabel...) {
+        labels.forEach { label in
+            switch label {
+            case redValueLabel:
+                label.text = string(from: redSlider)
+            case greenValueLabel:
+                label.text = string(from: greenSlider)
+            default:
+                label.text = string(from: blueSlider)
+            }
+        }
+    }
+}

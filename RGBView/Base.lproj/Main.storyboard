@@ -91,18 +91,21 @@
                                                 <rect key="frame" x="-2" y="0.0" width="243" height="31"/>
                                                 <connections>
                                                     <action selector="redSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="XxN-5h-jxJ"/>
+                                                    <action selector="rgbSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="FO1-rX-pb4"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="2Gg-4h-QEW">
                                                 <rect key="frame" x="-2" y="37" width="243" height="31"/>
                                                 <connections>
                                                     <action selector="greenSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="aqm-qi-z59"/>
+                                                    <action selector="rgbSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="c3e-FO-ItP"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="sK9-hz-Pdj">
                                                 <rect key="frame" x="-2" y="74" width="243" height="31"/>
                                                 <connections>
                                                     <action selector="blueSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="ebh-0V-CFH"/>
+                                                    <action selector="rgbSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ea9-dR-JDq"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
